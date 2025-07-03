@@ -1,0 +1,23 @@
+<mat-sidenav [@slideInOut]>
+    <div class="sidebar-header">
+      <h2>Tender</h2>
+    </div>
+    
+    <mat-nav-list>
+      <mat-list-item *ngFor="let category of categories" (click)="toggleCategory(category)">
+        <mat-icon matListIcon>{{category.icon}}</mat-icon>
+        <h3 matLine>{{category.name}}</h3>
+        <mat-icon>{{category.expanded ? 'expand_less' : 'expand_more'}}</mat-icon>
+      </mat-list-item>
+    </mat-nav-list>
+    
+    <div *ngFor="let category of categories">
+      <mat-list *ngIf="category.expanded">
+        <mat-list-item *ngFor="let tender of category.tenders" class="tender-item">
+          <mat-icon matListIcon>description</mat-icon>
+          <h4 matLine>{{tender.title}}</h4>
+          <p matLine>{{tender.description}}</p>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </mat-sidenav>

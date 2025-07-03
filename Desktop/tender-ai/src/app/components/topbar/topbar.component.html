@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button (click)="toggleMenu.emit()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    
+    <span class="title">Tender AI</span>
+    
+    <span class="spacer"></span>
+    
+    <button mat-button (click)="handleLogin()">
+      {{ isLoggedIn ? 'LOGOUT' : 'LOGIN' }}
+    </button>
+  </mat-toolbar>

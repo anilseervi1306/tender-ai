@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+    mat-sidenav {
+      width: 240px !important;
+      position: fixed !important;
+    }
+    
+    .predefined-queries .scroll-container {
+      padding: 0 8px;
+    }
+    
+    .input-container {
+      padding: 8px;
+    }
+  }

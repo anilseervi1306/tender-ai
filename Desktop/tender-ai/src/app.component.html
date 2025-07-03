@@ -1,0 +1,11 @@
+<app-topbar (toggleMenu)="sidebar.toggle()"></app-topbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidebar mode="side" [opened]="true" position="start">
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
+  
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

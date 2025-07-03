@@ -1,0 +1,30 @@
+<div class="predefined-queries">
+    <div class="scroll-container">
+      <button *ngFor="let q of predefinedQueries" 
+              mat-stroked-button 
+              (click)="query = q">
+        {{q}}
+      </button>
+    </div>
+  </div>
+  
+  <div class="input-container">
+    <div class="suggestion-box" *ngIf="showSuggestions">
+      <button *ngFor="let s of suggestions" 
+              mat-menu-item 
+              (click)="selectSuggestion(s)">
+        {{s}}
+      </button>
+    </div>
+    
+    <textarea #inputField
+              [(ngModel)]="query"
+              (input)="handleInput($event)"
+              placeholder="Type your query here... Type @ for suggestions"
+              rows="1"
+              autosize></textarea>
+              
+    <button mat-icon-button (click)="handleSubmit()">
+      <mat-icon>send</mat-icon>
+    </button>
+  </div>

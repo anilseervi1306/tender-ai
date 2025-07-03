@@ -1,0 +1,20 @@
+.sidebar-header {
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .tender-item {
+    height: auto !important;
+    margin-left: 16px;
+    padding: 8px 0;
+    
+    h4 {
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+    
+    p {
+      color: #666;
+      font-size: 12px;
+    }
+  }
